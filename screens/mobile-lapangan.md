@@ -40,9 +40,9 @@ Tujuan: daftar titik berurutan trip hari ini dan mulai trip.
 | [Offline]  Antrean: 3          |
 | T-xxx  Rute Utara  berangkat   |
 | 06.30                          |
-| 1. Titik A  xx kg  [menunggu]  |
-| 2. Titik B  xx kg  [menunggu]  |
-| 3. Titik C  xx kg  [menunggu]  |
+| 1. Titik A  xx g  [menunggu]  |
+| 2. Titik B  xx g  [menunggu]  |
+| 3. Titik C  xx g  [menunggu]  |
 | [      Mulai Trip       ]      |
 +--------------------------------+
 ```
@@ -59,7 +59,7 @@ Tujuan: titik tujuan saat ini; catat tiba dan berangkat per titik.
 | Titik B  (2 dari 3)            |
 | [Offline]  Antrean: 3          |
 | Pembeli: (nama)  Alamat: ...   |
-| Muatan: cabai A xx kg ...      |
+| Muatan: cabai A xx g ...      |
 | Tiba: --:--   Berangkat: --:-- |
 | [Buka Navigasi]                |
 | [       Catat Tiba      ]      |
@@ -143,8 +143,8 @@ Tujuan: jadwal dan perkiraan volume setor.
 +--------------------------------+
 | Rencana Setoran                |
 | [Offline]  Antrean: 1          |
-| Sen 26/10  cabai  ~xx kg [ubah]|
-| Kam 29/10  bawang ~xx kg [ubah]|
+| Sen 26/10  cabai  ~xx g [ubah]|
+| Kam 29/10  bawang ~xx g [ubah]|
 | [   Tambah Rencana Setoran  ]  |
 +--------------------------------+
 ```
@@ -161,15 +161,16 @@ Tujuan: status dan riwayat pembayaran petani (H+1 dari berat bersih per grade x 
 +--------------------------------+
 | Pembayaran Saya                |
 | [Offline]  Antrean: 0          |
-| Setoran 24/10   [Dibayar]      |
-|  Cabai A  xx kg  Rp x          |
-|  Cabai B  xx kg  Rp x          |
+| Setoran 24/10   [DIBAYAR]      |
+|  Cabai A  xx g  Rp x          |
+|  Cabai B  xx g  Rp x          |
 |  Total diterima  Rp x          |
-| Setoran 26/10   [Menunggu H+1] |
+| Setoran 26/10   [TERLAMBAT]    |
 +--------------------------------+
 ```
 
-- Komponen: daftar pembayaran per setoran dengan rincian per grade (berat, harga papan, subtotal) dan total; status teks (Menunggu H+1, Dibayar).
+- Berat gram bilangan bulat di semua layar mobile.
+- Komponen: daftar pembayaran per setoran dengan rincian per grade (berat, harga papan, subtotal) dan total; status teks hanya DIBAYAR atau TERLAMBAT (keputusan pemilik produk; TERLAMBAT = lewat batas H+1 16.00 belum dibayar). TERLAMBAT memakai `color.merah-susut` + ikon, DIBAYAR memakai `color.hijau-daun` + ikon. Pertanyaan untuk manajer: apakah perlu keadaan sebelum jatuh tempo? Bila tidak, setoran yang belum jatuh tempo tidak diberi lencana.
 - Semua angka dari sistem; layar tidak menghitung. Fee logistik tidak dipotong dari petani (BRD/30 BR-302) sehingga tidak muncul sebagai pengurang.
 
 ### 8. Papan Harga
@@ -198,5 +199,5 @@ Tujuan: harga papan minggu berjalan untuk petani (baca-saja).
 
 - Kontras seluruh pasangan warna ada di uji `tokens/`; status tidak hanya warna.
 - Target sentuh: aksi utama 56 dp, lainnya >= 48 dp.
-- Wireframe ASCII adalah spesifikasi tata letak untuk ditinjau di PR; berkas Figma resmi menyusul (lihat README repo).
+- Wireframe ASCII adalah spesifikasi tata letak untuk ditinjau di PR; desain dibuat dengan pencil.app (lihat README).
 - Isi kolom adalah usulan desain; FRD/FSD Lumbung v1.0.0 hanya menetapkan nama dan urutan layar, jadi asumsi ditandai di atas.

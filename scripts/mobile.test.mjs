@@ -37,6 +37,22 @@ test('template A3 SVG: ukuran A3, 6 harga, fee 2 zona, tanggal, hanya warna toke
   assert.equal((svg.match(/<\/svg>/g) || []).length, 1);
 });
 
+test('status pembayaran DIBAYAR/TERLAMBAT, berat gram, Grade B 85% dan kelipatan Rp500', () => {
+  const m = baca('screens/mobile-lapangan.md');
+  assert.match(m, /\[DIBAYAR\]/);
+  assert.match(m, /\[TERLAMBAT\]/);
+  assert.doesNotMatch(m, /Menunggu H\+1/);
+  assert.doesNotMatch(m, /xx kg/);
+  const p = baca('screens/papan-harga.md');
+  assert.match(p, /Grade B = 85 persen/);
+  for (const m2 of p.matchAll(/Rp(\d+)\.(\d{3})\/kg \|/g)) {
+    const n = Number(m2[1] + m2[2]);
+    if (n >= 5000) assert.equal(n % 500, 0, `bukan kelipatan Rp500: ${n}`);
+  }
+  const svg = baca('screens/papan-harga-a3.svg');
+  for (const [a, b] of [[31500, 26500], [28000, 23500], [6000, 5000]]) assert.equal(Math.floor((a * 0.85) / 500) * 500, b);
+});
+
 test('token yang dirujuk ada', () => {
   for (const f of ['screens/mobile-lapangan.md', 'screens/papan-harga.md'])
     for (const m of baca(f).matchAll(/`(color|type|radius|space|size)\.([a-z0-9-]+)`/g))

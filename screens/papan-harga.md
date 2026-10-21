@@ -7,7 +7,8 @@ Tiga jalur publikasi serentak maksimal Jumat 17.00: halaman web, cetakan A3, sia
 ## Isi wajib (BR-306)
 
 - 3 komoditas pilot: Cabai rawit merah, Bawang merah, Kangkung.
-- Harga per kg Grade A dan Grade B tiap komoditas (6 angka). Grade C tidak ditampilkan di papan.
+- Harga per kg Grade A dan Grade B tiap komoditas (6 angka). Grade C tidak ditampilkan di papan (ditolak dari rantai dingin).
+- Aturan harga (BRD/10 BR-002, keuangan/20): Grade A = 100 persen harga papan; Grade B = 85 persen harga papan; harga papan dibulatkan ke bawah kelipatan Rp500. Semua angka tampil adalah kelipatan Rp500 dan datang dari sistem (contoh: Grade A Rp31.500, 85 persen = Rp26.775, dibulatkan ke bawah Rp26.500).
 - Fee logistik terpisah di bawah papan, dua zona: Zona Dekat (< 15 km) Rp1.500/kg dan Zona Jauh (15-25 km) Rp2.500/kg, dengan teks bahwa fee bukan bagian harga papan (agar tidak tercampur).
 - Tanggal berlaku: "Berlaku Senin-Minggu, (tanggal mulai) - (tanggal akhir)", plus waktu publikasi.
 - Angka dari sistem; desain tidak menghitung median, buffer, atau pembulatan.
@@ -21,6 +22,10 @@ Data contoh di dokumen ini dan di `papan-harga-a3.svg` adalah contoh papan 6-12 
 | Kangkung | Rp6.000/kg | Rp5.000/kg |
 
 Fee logistik: Zona Dekat Rp1.500/kg, Zona Jauh Rp2.500/kg.
+
+## Hak akses
+
+Hak admin minimum (keputusan pemilik produk): admin hanya mengubah papan harga dan tarif fee. Halaman publik hanya membaca. Layar petani/sopir tidak punya kolom harga.
 
 ## Web publik
 
