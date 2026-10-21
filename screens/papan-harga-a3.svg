@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="420mm" viewBox="0 0 2970 4200" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif">
+  <title>Papan Harga Lumbung (A3)</title>
+  <desc>Template cetakan A3 pintu gudang. Angka contoh papan 6-12 Oktober 2026 (BRD/30 BR-305); ganti tiap minggu dari data sistem.</desc>
+  <rect width="2970" height="4200" fill="#FAFAFA"/>
+  <rect x="150" y="150" width="2670" height="400" rx="48" fill="#2E7D32"/>
+  <text x="250" y="400" font-size="170" font-weight="700" fill="#FFFFFF">PAPAN HARGA LUMBUNG</text>
+  <text x="150" y="720" font-size="120" font-weight="700" fill="#212121">Berlaku Senin-Minggu, 6 - 12 Oktober 2026</text>
+  <text x="150" y="840" font-size="72" fill="#616161">Harga per kg. Terbit Jumat 17.00. Tidak berubah di tengah minggu.</text>
+  <rect x="150" y="930" width="2670" height="200" rx="24" fill="#1B5E20"/>
+  <text x="250" y="1060" font-size="100" font-weight="700" fill="#FFFFFF">Komoditas</text>
+  <text x="1700" y="1060" font-size="100" font-weight="700" fill="#FFFFFF" text-anchor="end">Grade A</text>
+  <text x="2720" y="1060" font-size="100" font-weight="700" fill="#FFFFFF" text-anchor="end">Grade B</text>
+  <rect x="150" y="1130" width="2670" height="560" fill="#FFFFFF" stroke="#757575" stroke-width="6"/>
+  <text x="250" y="1300" font-size="130" font-weight="700" fill="#212121">Cabai rawit merah</text>
+  <text x="1700" y="1530" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp31.500</text>
+  <text x="2720" y="1530" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp26.500</text>
+  <text x="1700" y="1640" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <text x="2720" y="1640" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <rect x="150" y="1690" width="2670" height="560" fill="#FAFAFA" stroke="#757575" stroke-width="6"/>
+  <text x="250" y="1860" font-size="130" font-weight="700" fill="#212121">Bawang merah</text>
+  <text x="1700" y="2090" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp28.000</text>
+  <text x="2720" y="2090" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp23.500</text>
+  <text x="1700" y="2200" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <text x="2720" y="2200" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <rect x="150" y="2250" width="2670" height="560" fill="#FFFFFF" stroke="#757575" stroke-width="6"/>
+  <text x="250" y="2420" font-size="130" font-weight="700" fill="#212121">Kangkung</text>
+  <text x="1700" y="2650" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp6.000</text>
+  <text x="2720" y="2650" font-size="190" font-weight="700" fill="#212121" text-anchor="end">Rp5.000</text>
+  <text x="1700" y="2760" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <text x="2720" y="2760" font-size="72" fill="#616161" text-anchor="end">per kg</text>
+  <rect x="150" y="2920" width="2670" height="820" rx="48" fill="#FFF8E1" stroke="#F9A825" stroke-width="24"/>
+  <text x="250" y="3070" font-size="110" font-weight="700" fill="#212121">Fee logistik (terpisah dari harga papan)</text>
+  <text x="250" y="3220" font-size="100" font-weight="700" fill="#212121">Zona Dekat</text>
+  <text x="250" y="3310" font-size="80" fill="#616161">kurang dari 15 km</text>
+  <text x="250" y="3510" font-size="170" font-weight="700" fill="#212121">Rp1.500/kg</text>
+  <text x="1550" y="3220" font-size="100" font-weight="700" fill="#212121">Zona Jauh</text>
+  <text x="1550" y="3310" font-size="80" fill="#616161">15 - 25 km</text>
+  <text x="1550" y="3510" font-size="170" font-weight="700" fill="#212121">Rp2.500/kg</text>
+  <text x="250" y="3650" font-size="72" fill="#616161">Fee ditagih ke pembeli, tidak dipotong dari petani.</text>
+  <line x1="150" y1="3870" x2="2820" y2="3870" stroke="#757575" stroke-width="6"/>
+  <text x="150" y="4000" font-size="72" fill="#212121">Berlaku 6 - 12 Oktober 2026. Sengketa harga: minta lembar perhitungan ke Admin Gudang.</text>
+  <text x="150" y="4100" font-size="72" fill="#616161">Paraf Admin Gudang: ____________   Ditempel: ___ / ___ / 2026   jam _____</text>
+</svg>
