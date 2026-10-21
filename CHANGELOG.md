@@ -4,6 +4,9 @@ Semua perubahan penting lumbung-design dicatat di sini. Format mengikuti Keep a 
 
 ## [Belum dirilis]
 
+### Diubah
+- Sumber desain = pencil.app (bukan Figma); keputusan produk diterapkan: Grade B 85 persen papan (BR-002), berat gram integer, status DIBAYAR/TERLAMBAT, hak admin minimum (papan harga + tarif fee).
+
 ### Ditambahkan
 - Layar mobile sopir (4) dan petani (4) dengan status offline/antrean, papan harga web publik, dan template A3 pintu gudang (SVG) dengan uji `scripts/mobile.test.mjs` (LMB-DSG-004).
 - Flow gudang 7 langkah, 7 layar desktop Windows (bilah Online/Offline + antrean) dan struk fee thermal 80 mm, dengan uji kelengkapan `scripts/desain.test.mjs` (LMB-DSG-003).
