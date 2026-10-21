@@ -1,0 +1,54 @@
+{
+  "versi": "1.0.0",
+  "catatan": "Sumber tunggal token. Hasil build: tokens/build/lumbung.css (Svelte web) dan tokens/build/LumbungTokens.kt (Compose KMP). Jangan edit berkas build dengan tangan; jalankan `node scripts/build-tokens.mjs`.",
+  "color": {
+    "hijau-daun": "#2E7D32",
+    "hijau-daun-tua": "#1B5E20",
+    "kuning-panen": "#F9A825",
+    "kuning-panen-muda": "#FFF8E1",
+    "abu-karung": "#616161",
+    "abu-garis": "#757575",
+    "merah-susut": "#C62828",
+    "merah-susut-muda": "#FFEBEE",
+    "oranye-offline": "#BF360C",
+    "biru-info": "#1565C0",
+    "putih-kapas": "#FAFAFA",
+    "putih": "#FFFFFF",
+    "tinta": "#212121"
+  },
+  "font": {
+    "sans": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif",
+    "mono": "ui-monospace, 'Cascadia Mono', Consolas, 'Courier New', monospace"
+  },
+  "type": {
+    "angka-timbang": { "size": 56, "line": 64, "weight": 700, "family": "mono", "tabular": true },
+    "judul-besar": { "size": 28, "line": 36, "weight": 700, "family": "sans" },
+    "judul": { "size": 20, "line": 28, "weight": 700, "family": "sans" },
+    "isi-besar": { "size": 18, "line": 26, "weight": 400, "family": "sans" },
+    "isi": { "size": 14, "line": 20, "weight": 400, "family": "sans" },
+    "label": { "size": 12, "line": 16, "weight": 600, "family": "sans" },
+    "struk": { "size": 12, "line": 16, "weight": 400, "family": "mono" }
+  },
+  "radius": { "tombol": 8, "input": 8, "kartu": 12, "chip": 999 },
+  "space": { "1": 4, "2": 8, "3": 12, "4": 16, "5": 24, "6": 32, "7": 48 },
+  "size": {
+    "target-min": 48,
+    "target-sarung": 56,
+    "garis-fokus": 3
+  },
+  "contrast": [
+    { "fg": "tinta", "bg": "putih-kapas", "min": 7, "untuk": "teks isi (cahaya terang)" },
+    { "fg": "tinta", "bg": "putih", "min": 7, "untuk": "teks di kartu" },
+    { "fg": "putih", "bg": "hijau-daun", "min": 4.5, "untuk": "teks tombol aksi utama" },
+    { "fg": "putih", "bg": "hijau-daun-tua", "min": 7, "untuk": "tombol aksi utama ditekan" },
+    { "fg": "tinta", "bg": "kuning-panen", "min": 7, "untuk": "teks pada sorotan lot aktif" },
+    { "fg": "tinta", "bg": "kuning-panen-muda", "min": 7, "untuk": "teks pada latar lot aktif" },
+    { "fg": "abu-karung", "bg": "putih-kapas", "min": 4.5, "untuk": "teks sekunder" },
+    { "fg": "putih", "bg": "merah-susut", "min": 4.5, "untuk": "teks pada peringatan susut" },
+    { "fg": "merah-susut", "bg": "merah-susut-muda", "min": 4.5, "untuk": "teks peringatan di latar muda" },
+    { "fg": "putih", "bg": "oranye-offline", "min": 4.5, "untuk": "bilah Offline" },
+    { "fg": "putih", "bg": "biru-info", "min": 4.5, "untuk": "info/tautan" },
+    { "fg": "abu-garis", "bg": "putih-kapas", "min": 3, "untuk": "garis kontrol/input (bukan teks, WCAG 1.4.11)" },
+    { "fg": "hijau-daun", "bg": "putih-kapas", "min": 3, "untuk": "ikon/garis hijau (bukan teks)" }
+  ]
+}

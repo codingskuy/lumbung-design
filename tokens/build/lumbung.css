@@ -1,0 +1,62 @@
+/* Dihasilkan oleh scripts/build-tokens.mjs dari tokens/lumbung.tokens.json (v1.0.0). Jangan edit. */
+:root {
+  --lumbung-hijau-daun: #2E7D32;
+  --lumbung-hijau-daun-tua: #1B5E20;
+  --lumbung-kuning-panen: #F9A825;
+  --lumbung-kuning-panen-muda: #FFF8E1;
+  --lumbung-abu-karung: #616161;
+  --lumbung-abu-garis: #757575;
+  --lumbung-merah-susut: #C62828;
+  --lumbung-merah-susut-muda: #FFEBEE;
+  --lumbung-oranye-offline: #BF360C;
+  --lumbung-biru-info: #1565C0;
+  --lumbung-putih-kapas: #FAFAFA;
+  --lumbung-putih: #FFFFFF;
+  --lumbung-tinta: #212121;
+  --lumbung-font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  --lumbung-font-mono: ui-monospace, 'Cascadia Mono', Consolas, 'Courier New', monospace;
+  --lumbung-type-angka-timbang-size: 56px;
+  --lumbung-type-angka-timbang-line: 64px;
+  --lumbung-type-angka-timbang-weight: 700;
+  --lumbung-type-angka-timbang-family: var(--lumbung-font-mono);
+  --lumbung-type-judul-besar-size: 28px;
+  --lumbung-type-judul-besar-line: 36px;
+  --lumbung-type-judul-besar-weight: 700;
+  --lumbung-type-judul-besar-family: var(--lumbung-font-sans);
+  --lumbung-type-judul-size: 20px;
+  --lumbung-type-judul-line: 28px;
+  --lumbung-type-judul-weight: 700;
+  --lumbung-type-judul-family: var(--lumbung-font-sans);
+  --lumbung-type-isi-besar-size: 18px;
+  --lumbung-type-isi-besar-line: 26px;
+  --lumbung-type-isi-besar-weight: 400;
+  --lumbung-type-isi-besar-family: var(--lumbung-font-sans);
+  --lumbung-type-isi-size: 14px;
+  --lumbung-type-isi-line: 20px;
+  --lumbung-type-isi-weight: 400;
+  --lumbung-type-isi-family: var(--lumbung-font-sans);
+  --lumbung-type-label-size: 12px;
+  --lumbung-type-label-line: 16px;
+  --lumbung-type-label-weight: 600;
+  --lumbung-type-label-family: var(--lumbung-font-sans);
+  --lumbung-type-struk-size: 12px;
+  --lumbung-type-struk-line: 16px;
+  --lumbung-type-struk-weight: 400;
+  --lumbung-type-struk-family: var(--lumbung-font-mono);
+  --lumbung-radius-tombol: 8px;
+  --lumbung-radius-input: 8px;
+  --lumbung-radius-kartu: 12px;
+  --lumbung-radius-chip: 999px;
+  --lumbung-space-1: 4px;
+  --lumbung-space-2: 8px;
+  --lumbung-space-3: 12px;
+  --lumbung-space-4: 16px;
+  --lumbung-space-5: 24px;
+  --lumbung-space-6: 32px;
+  --lumbung-space-7: 48px;
+  --lumbung-size-target-min: 48px;
+  --lumbung-size-target-sarung: 56px;
+  --lumbung-size-garis-fokus: 3px;
+}
+
+.lumbung-angka-timbang { font-variant-numeric: tabular-nums; }
