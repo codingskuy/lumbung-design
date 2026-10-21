@@ -101,6 +101,6 @@ Skala 4-pt: `1`=4, `2`=8, `3`=12, `4`=16, `5`=24, `6`=32, `7`=48 (`--lumbung-spa
 - Ditambahkan radius `input`, `chip`; spasi `6`=32, `7`=48; ukuran `target-min`, `target-sarung`, `garis-fokus`.
 - Ditambahkan pipeline `scripts/` (build CSS + Kotlin, uji kontras).
 
-## Figma
+## Sumber desain
 
-Link Figma token: belum ada (berkas Figma resmi belum dibuat); lihat `README.md` repo.
+Alat desain: pencil.app; token di berkas ini adalah sumber tunggal dan tidak bergantung pada berkas alat desain.
