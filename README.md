@@ -11,7 +11,7 @@ Desain produk Lumbung: token, alur gudang, dan struk fee.
 - `tokens/` — token desain (warna, tipografi, radius, spasi); sumber JSON + keluaran `build/lumbung.css` dan `build/LumbungTokens.kt`.
 - `scripts/` — pembangun dan uji token (`node scripts/build-tokens.mjs`, `node --test scripts/tokens.test.mjs`).
 - `flows/` — alur gudang: terima lot, timbang kotor, sortir, timbang bersih, label, susun trip, surat jalan.
-- `screens/` — layar gudang desktop, struk fee, (menyusul) mobile dan papan harga.
+- `screens/` — layar gudang desktop, struk fee, mobile sopir/petani, papan harga web dan template A3.
 
 ## Prinsip
 
