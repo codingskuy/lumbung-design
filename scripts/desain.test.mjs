@@ -47,6 +47,13 @@ test('token yang dirujuk layar ada di sumber token', () => {
   }
 });
 
-test('README desain mendaftar Figma (tautan atau penanda menyusul)', () => {
-  assert.match(baca('README.md'), /Figma/);
+test('README menyebut pencil.app dan tidak mewajibkan Figma', () => {
+  const r = baca('README.md');
+  assert.match(r, /pencil\.app/);
+  assert.doesNotMatch(r, /tautan menyusul/);
+});
+
+test('berat gram integer: struk tanpa desimal pada Berat', () => {
+  const s = baca('screens/struk-fee.md');
+  assert.match(s, /^Berat\s+: [\d.]+ g$/m);
 });
