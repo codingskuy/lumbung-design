@@ -23,13 +23,13 @@ flowchart LR
 
 | # | Langkah | Layar | Pelaku | Masukan | Keluaran | Aksi utama |
 |---|---|---|---|---|---|---|
-| 1 | Terima lot | Dasbor Hari Ini, lanjut Timbang Lot | Admin gudang | Pilih trip masuk; pindai/ketik id lot; cek komoditas dan asal kebun | Lot berstatus "diterima" | Terima Lot |
-| 2 | Timbang kotor | Timbang Lot | Admin gudang | Angka timbangan (USB/serial) | Berat kotor (gram bulat) tersimpan lokal | Simpan Berat Kotor |
-| 3 | Sortir A/B/C | Hasil Sortir | Admin gudang | Berat per grade A, B, C | Pembagian grade tersimpan lokal | Simpan Hasil Sortir |
-| 4 | Timbang bersih | Timbang Lot (mode bersih) | Admin gudang | Angka timbangan setelah sortir | Berat bersih; selisih/susut tampil sebagai informasi | Simpan Berat Bersih |
-| 5 | Cetak label | Cetak Label | Admin gudang | Pilih keranjang/grade | Label keranjang tercetak, status cetak tersimpan | Cetak Label |
-| 6 | Susun trip | Susun Trip | Admin gudang | Pilih lot teralokasi ke trip, urutan titik antar | Trip tersusun dan siap muat | Simpan Trip |
-| 7 | Cetak surat jalan | Cetak Surat Jalan | Admin gudang | Pilih trip | Surat jalan tercetak (nomor sementara `TMP-` bila offline) | Cetak Surat Jalan |
+| 1 | Terima lot | Dasbor Hari Ini, lanjut Timbang Lot | Petugas gudang | Pilih trip masuk; pindai/ketik id lot; cek komoditas dan asal kebun | Lot berstatus "diterima" | Terima Lot |
+| 2 | Timbang kotor | Timbang Lot | Petugas gudang | Angka timbangan (USB/serial) | Berat kotor (gram bulat) tersimpan lokal | Simpan Berat Kotor |
+| 3 | Sortir A/B/C | Hasil Sortir | Petugas gudang | Berat per grade A, B, C | Pembagian grade tersimpan lokal | Simpan Hasil Sortir |
+| 4 | Timbang bersih | Timbang Lot (mode bersih) | Petugas gudang | Angka timbangan setelah sortir | Berat bersih; selisih/susut tampil sebagai informasi | Simpan Berat Bersih |
+| 5 | Cetak label | Cetak Label | Petugas gudang | Pilih keranjang/grade | Label keranjang tercetak, status cetak tersimpan | Cetak Label |
+| 6 | Susun trip | Susun Trip | Petugas gudang | Pilih lot teralokasi ke trip, urutan titik antar | Trip tersusun dan siap muat | Simpan Trip |
+| 7 | Cetak surat jalan | Cetak Surat Jalan | Petugas gudang | Pilih trip | Surat jalan tercetak (nomor sementara `TMP-` bila offline) | Cetak Surat Jalan |
 
 Dukungan: Arsip Kontrak (baca saja) dibuka dari bilah samping di semua langkah untuk merujuk kontrak petani; bukan langkah wajib. Struk fee dicetak dari Timbang Lot setelah langkah 4 (lihat struk).
 
@@ -41,6 +41,9 @@ Dukungan: Arsip Kontrak (baca saja) dibuka dari bilah samping di semua langkah u
 - Konflik: gudang menang untuk berat dan grade; layar menampilkan pemberitahuan bila nilai lapangan dikalahkan (FSD/10 butir 4).
 - Offline lebih dari 3 x 24 jam: tombol "Cetak Surat Jalan" terkunci dengan alasan tertulis; timbang dan bukti tetap bisa (FSD/10 butir 5).
 - Uang integer rupiah, berat integer gram; desain hanya menampilkan angka dari sistem dan tidak menghitung ulang fee atau grade (AGENTS repo, aturan 7).
+
+- Berat gram bilangan bulat di semua layar dan struk. Hak admin minimum: admin hanya papan harga dan tarif fee; flow gudang tidak mengubah harga atau tarif.
+- Harga ke petani mengacu papan: Grade A 100 persen, Grade B 85 persen, Grade C ditolak dari rantai dingin (BRD/10 BR-002); Hasil Sortir menampilkan Grade C sebagai "ditolak", bukan dihargai.
 
 ## Keadaan galat dan tepi
 

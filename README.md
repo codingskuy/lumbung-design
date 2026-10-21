@@ -2,9 +2,10 @@
 
 Desain produk Lumbung: token, alur gudang, dan struk fee.
 
-## Figma
+## Sumber desain
 
-- Berkas Figma: [Lumbung — berkas desain (tautan menyusul)](https://www.figma.com/) — tautan masih kosong, akan diisi alamat berkas Figma resmi saat tersedia.
+- Alat desain: pencil.app (dipakai di laptop pemilik desain), bukan Figma. Berkas desain disimpan di repo ini hanya bila formatnya berkas teks; format berkas pencil.app belum dikonfirmasi (lihat pertanyaan di PR #5).
+- Sumber kebenaran yang dapat ditinjau di repo: `tokens/` (JSON), `flows/` dan `screens/` (Markdown + wireframe ASCII), `screens/papan-harga-a3.svg`.
 
 ## Isi
 

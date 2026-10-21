@@ -2,6 +2,10 @@
 
 Tiket LMB-DSG-003. Tujuh layar urutan FSD/10-alur untuk aplikasi gudang (`lumbung-app-kmp`, target desktop Windows, Compose Multiplatform). Alur: [`flows/gudang-timbang-sampai-surat-jalan.md`](../flows/gudang-timbang-sampai-surat-jalan.md). Token: [`tokens/`](../tokens/README.md).
 
+## Hak akses
+
+Desktop gudang dioperasikan petugas gudang untuk alur timbang sampai surat jalan. Hak admin minimum (keputusan pemilik produk): admin hanya mengubah papan harga dan tarif fee; layar di sini tidak memuat pengaturan harga atau tarif (hanya menampilkan nilai dari sistem). Penamaan peran "Admin gudang" di PRD/10 perlu diselaraskan oleh manajer.
+
 ## Kerangka bersama (semua layar)
 
 - Jendela minimum 1280 x 720; skala tampilan Windows 100% sampai 150%. Dioperasikan dengan mouse/sentuh dan keyboard; timbangan lewat USB/serial.
@@ -26,7 +30,7 @@ Tiket LMB-DSG-003. Tujuh layar urutan FSD/10-alur untuk aplikasi gudang (`lumbun
 - Status Online/Offline: Online = ikon titik + teks "Online" di `color.hijau-daun`; Offline = ikon + teks "Offline" pada pil `color.oranye-offline` teks `color.putih`; angka antrean `type.isi-besar`, dengan teks "Antrean: N". Antrean > 0 saat Online menampilkan "Menyinkron..." `color.biru-info`.
 - Bilah samping 7 item mengikuti urutan FSD/10, aktif ditandai `color.kuning-panen-muda` + garis kiri `color.kuning-panen` (bukan warna saja: teks tebal `type.label`).
 - Semua simpan langsung berhasil (tulis lokal dahulu); toast "Tersimpan (menunggu sinkron)" saat Offline.
-- Angka berat memakai `type.angka-timbang`; teks isi `type.isi` (desktop, mouse) dengan `type.isi-besar` untuk nilai utama.
+- Berat selalu gram bilangan bulat (tanpa desimal, titik ribuan, satuan "g"); konversi ke kg hanya pada tarif per kg di struk. Angka berat memakai `type.angka-timbang`; teks isi `type.isi` (desktop, mouse) dengan `type.isi-besar` untuk nilai utama.
 
 ## 1. Dasbor Hari Ini
 
@@ -42,7 +46,7 @@ Tujuan: ringkasan kerja hari ini dan pintu masuk ke langkah berikutnya (PRD/10 a
 |        | | T-xxx  | (nama)    | cabai    | L-xxxx    | menunggu|          |
 |        | +--------+-----------+----------+-----------+---------+          |
 |        | Stok lot per grade        Antrean sinkron        Susut hari ini    |
-|        | [ A  xxx kg ][ B xxx kg ][ C xxx kg ]   N rekaman   x,x %          |
+|        | [ A xxxxxx g ][ B xxxxxx g ][ C xxxxxx g ]   N rekaman   x,x %          |
 +--------+-------------------------------------------------------------------+
 ```
 
@@ -106,7 +110,7 @@ Tujuan: cetak label keranjang per grade (langkah 5).
 |        |  [x] Grade A  jumlah label [ 3 ]   [ ] Grade B   [ ] Grade C      |
 |        |  Pratinjau label: +--------------------+                          |
 |        |                   | L-xxxx  cabai  A   |                          |
-|        |                   | xx,x kg   tanggal  |                          |
+|        |                   | xxxxx g   tanggal  |                          |
 |        |                   +--------------------+                          |
 |        |  Printer: tersambung   Status cetak: belum                        |
 |        |  [Kembali]                          [ Cetak Label ]               |
@@ -126,8 +130,8 @@ Tujuan: alokasi lot ke trip dan urutan titik antar (langkah 6; PRD/20 langkah 2-
 | Susun Trip  (Langkah 6 dari 7)         [Online] Antrean: 0   Petugas: Rina |
 +--------+-------------------------------------------------------------------+
 |        | Lot siap muat              | Trip: (pilih)  Rute: Utara  Zona: .. |
-|        |  [ ] L-xxxx cabai A x kg   |  1. Titik A - L-xxxx  x kg           |
-|        |  [ ] L-xxxx bawang A x kg  |  2. Titik B - L-xxxx  x kg           |
+|        |  [ ] L-xxxx cabai A x g    |  1. Titik A - L-xxxx  x g            |
+|        |  [ ] L-xxxx bawang A x g   |  2. Titik B - L-xxxx  x g            |
 |        |            [Tambah >>]     |  [^] [v] ubah urutan   [Hapus]       |
 |        |  [Kembali]                         [ Simpan Trip ]               |
 +--------+-------------------------------------------------------------------+
@@ -183,4 +187,4 @@ Tujuan: rujukan baca-saja kontrak mini musim petani (90 hari) saat bekerja di gu
 - Kontras: seluruh pasangan warna di atas ada di daftar uji `tokens/` (teks isi 7:1, sisanya >= 4.5:1).
 - Status tidak hanya warna: ikon + teks pada Online/Offline, grade (huruf), galat (teks).
 - Target sentuh: aksi utama `size.target-sarung` (56), kontrol lain >= `size.target-min` (48).
-- Wireframe ASCII adalah spesifikasi tata letak yang dapat ditinjau di PR; berkas Figma resmi menyusul (lihat README repo).
+- Wireframe ASCII adalah spesifikasi tata letak yang dapat ditinjau di PR; berkas pencil.app milik pemilik desain bukan bagian repo (lihat README).

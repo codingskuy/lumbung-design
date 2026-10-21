@@ -10,7 +10,7 @@ Nama gudang, Id lot, Berat, Fee, Total, Waktu cetak (acceptance LMB-DSG-003, ADR
 
 - Kertas thermal 80 mm; font mono `type.struk` (12/16), lebar karakter 48 kolom (Font A, 203 dpi, area cetak sekitar 72 mm). Seluruh baris <= 48 kolom (diuji otomatis).
 - Satu kolom, rata kiri-kanan dengan spasi; garis pemisah `-` dan `=`; tanpa warna, tanpa ikon gambar (hitam putih thermal).
-- Uang: bilangan bulat rupiah dengan titik ribuan ("Rp1.500"); berat: gram integer ditampilkan kg dengan nama satuan jelas. Desain tidak menghitung fee atau total; keduanya datang dari sistem.
+- Uang: bilangan bulat rupiah dengan titik ribuan ("Rp1.500"); berat: gram bilangan bulat dengan titik ribuan dan satuan "g" (tanpa desimal). Desain tidak menghitung fee atau total; keduanya datang dari sistem.
 - Cetak ganda dicegah: struk membawa penanda "CETAK ULANG" bila status cetak sudah tercatat; status cetak disimpan ke sistem.
 - Offline: waktu cetak memakai jam perangkat; id lot boleh bernomor sementara `TMP-xxxxxxxx` (FSD/10).
 - Contoh di bawah ilustratif: tarif zona Dekat Rp1.500/kg dari BRD/30 BR-301; nama gudang, id lot, berat dan waktu adalah isian contoh, bukan data nyata.
@@ -25,7 +25,7 @@ Id lot        : L-8812
 Komoditas     : Cabai rawit merah, Grade A
 Zona          : Dekat (< 15 km)
 ------------------------------------------------
-Berat         : 100,000 kg
+Berat         : 100.000 g
 Tarif fee     : Rp1.500 / kg
 Fee           : Rp150.000
 ================================================
